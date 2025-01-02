@@ -21,17 +21,17 @@ const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
       </button>
       <ul className={`burguer-menu ${menu ? 'activated' : ''} z-[1000]`}>
         <>
-          <li className='text-center text-base '>
+          <li className='text-center text-base py-2'>
             <Link href='/' onClick={handleMenuClose}>
               Inicio
             </Link>
           </li>
-          <li className='text-center text-base '>
+          <li className='text-center text-base py-2'>
             <Link href='/' onClick={handleMenuClose}>
               Nosotros
             </Link>
           </li>
-          <li className='text-center text-base '>
+          <li className='text-center text-base py-2'>
             <Link href='/' onClick={handleMenuClose}>
               Contacto
             </Link>
