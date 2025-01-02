@@ -19,7 +19,7 @@
 
 .activated {
   position: absolute;
-  top: 20vh;
+  top: 28vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
