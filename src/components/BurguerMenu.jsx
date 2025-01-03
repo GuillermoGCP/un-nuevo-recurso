@@ -3,6 +3,7 @@ import '../styles/header.css'
 import MenuIcon from './MenuIcon'
 
 const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
+  const currentPage = window.location.pathname
   return (
     <>
       <button
@@ -13,21 +14,27 @@ const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
       </button>
       <ul className={`burguer-menu ${menu ? 'activated' : ''} z-[1000]`}>
         <>
-          <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
-            <Link href='/' onClick={handleMenuClose}>
-              Inicio
-            </Link>
-          </li>
-          <li className='text-center text-base py-2  hover:text-red-600 hover:animate-bounce'>
-            <Link href='/' onClick={handleMenuClose}>
-              Nosotros
-            </Link>
-          </li>
-          <li className='text-center text-base py-2  hover:text-red-600 hover:animate-bounce'>
-            <Link href='/' onClick={handleMenuClose}>
-              Contacto
-            </Link>
-          </li>
+          {currentPage !== '/' && (
+            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
+              <Link href='/' onClick={handleMenuClose}>
+                Inicio
+              </Link>
+            </li>
+          )}
+          {currentPage !== '/gallery' && (
+            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
+              <Link href='/' onClick={handleMenuClose}>
+                Galería
+              </Link>
+            </li>
+          )}
+          {currentPage !== '/us' && (
+            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
+              <Link href='/' onClick={handleMenuClose}>
+                Quienes somos
+              </Link>
+            </li>
+          )}
         </>
       </ul>
     </>
