@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono, Atma } from 'next/font/google'
 import './globals.css'
+import ScrollToTop from '@/components/ScrollToTop'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${atma.variable} antialiased`}
       >
         {children}
+        <ScrollToTop />
       </body>
     </html>
   )
