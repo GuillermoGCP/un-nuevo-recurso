@@ -2,11 +2,11 @@
 import Link from 'next/link'
 import '../styles/header.css'
 import MenuIcon from './MenuIcon'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
-  const router = useRouter()
-  const currentPage = router.pathname
+  const router = usePathname()
+  const currentPage = router
 
   return (
     <>

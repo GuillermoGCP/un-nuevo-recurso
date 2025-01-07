@@ -1,9 +1,8 @@
 .video-responsive {
-  height: 0;
+  height: 315px;
   width: 100%;
   max-width: 560px;
   overflow: hidden;
-  padding-bottom: 56.25%;
   position: relative;
 }
 

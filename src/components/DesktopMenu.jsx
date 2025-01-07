@@ -1,9 +1,10 @@
+'use client'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 const DesktopMenu = () => {
-  const router = useRouter()
-  const currentPage = router.pathname
+  const router = usePathname()
+  const currentPage = router
 
   return (
     <ul
