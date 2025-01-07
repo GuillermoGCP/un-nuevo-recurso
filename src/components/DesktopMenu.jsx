@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 const DesktopMenu = () => {
-  const currentPage = window.location.pathname
+  const router = useRouter()
+  const currentPage = router.pathname
 
   return (
     <ul

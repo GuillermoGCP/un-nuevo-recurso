@@ -1,9 +1,13 @@
+'use client'
 import Link from 'next/link'
 import '../styles/header.css'
 import MenuIcon from './MenuIcon'
+import { useRouter } from 'next/navigation'
 
 const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
-  const currentPage = window.location.pathname
+  const router = useRouter()
+  const currentPage = router.pathname
+
   return (
     <>
       <button
