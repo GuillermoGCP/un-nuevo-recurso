@@ -1,9 +1,10 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
-const FloatingButton = () => {
+const FloatingButton = ({ route }) => {
   const [isVisible, setIsVisible] = useState(false)
-
+  const router = useRouter()
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true)
@@ -13,7 +14,7 @@ const FloatingButton = () => {
   }, [])
 
   const handleClick = () => {
-    alert('¡Botón flotante clickeado!')
+    router.push(route)
   }
 
   return (
@@ -25,7 +26,6 @@ const FloatingButton = () => {
           style={{
             opacity: isVisible ? 1 : 0,
             transition: 'opacity 1s ease-in',
-            boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.8)',
           }}
           aria-label='Botón flotante'
         >

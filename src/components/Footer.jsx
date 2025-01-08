@@ -97,8 +97,8 @@ const Footer = () => {
 
         {/* Información del diseñador web */}
         <div className='text-center'>
-          <p className='text-sm'>Diseño y mantenimiento web:</p>
-          <p className='font-semibold'>Guillermo Cerviño Porto</p>
+          <p className='text-xs'>Diseño y mantenimiento web:</p>
+          <p className='font-semibold text-sm'>Guillermo Cerviño Porto</p>
           <div className='flex justify-center space-x-4 mt-2'>
             <a
               href='https://www.linkedin.com/in/guillermocporto/'

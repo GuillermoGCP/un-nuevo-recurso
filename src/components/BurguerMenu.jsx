@@ -16,10 +16,10 @@ const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
       >
         <MenuIcon />
       </button>
-      <ul className={`burguer-menu ${menu ? 'activated' : ''} z-[1000]`}>
+      <ul className={`burguer-menu ${menu ? 'activated' : ''} z-[1000] `}>
         <>
           {currentPage !== '/' && (
-            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
+            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce '>
               <Link href='/' onClick={handleMenuClose}>
                 Inicio
               </Link>
@@ -36,6 +36,13 @@ const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
             <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
               <Link href='/' onClick={handleMenuClose}>
                 Quienes somos
+              </Link>
+            </li>
+          )}
+          {currentPage !== '/colaborate' && (
+            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
+              <Link href='/colaborate' onClick={handleMenuClose}>
+                Colabora
               </Link>
             </li>
           )}

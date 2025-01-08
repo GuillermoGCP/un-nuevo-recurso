@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
-const useMainComponent = () => {
+const usePicModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [url, setUrl] = useState('')
 
   const firstSectionRef = useRef(null)
   const secondSectionRef = useRef(null)
+  const thirdSectionRef = useRef(null)
+  const fourthSectionRef = useRef(null)
+  const fithSectionRef = useRef(null)
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
@@ -21,6 +24,12 @@ const useMainComponent = () => {
         setUrl('/portada.jpeg')
       } else if (path.includes(secondSectionRef.current)) {
         setUrl('/mercadillo.jpeg')
+      } else if (path.includes(thirdSectionRef.current)) {
+        setUrl('/colabora.jpg')
+      } else if (path.includes(fourthSectionRef.current)) {
+        setUrl('/colabora3.jpg')
+      } else if (path.includes(fithSectionRef.current)) {
+        setUrl('/colabora2.jpg')
       }
     }
 
@@ -36,6 +45,9 @@ const useMainComponent = () => {
     secondSectionRef,
     handleOpenModal,
     handleCloseModal,
+    thirdSectionRef,
+    fourthSectionRef,
+    fithSectionRef,
   }
 }
-export default useMainComponent
+export default usePicModal
