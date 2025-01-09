@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import '../styles/footer.css'
+import MailIcon from './icons/MailIcon'
 const Footer = () => {
   return (
     <footer className='footer '>
@@ -16,13 +17,22 @@ const Footer = () => {
           </h2>
           <Image
             src='/logoP-NR.jpg'
-            alt='Imagen de algunos miembros de la asociación con niños y amigos'
+            alt='Imagen del logo de la asociación'
             width={80}
             height={80}
             className='mx-auto mt-4 border-2 border-white rounded-full'
           />
+
           <p className='text-md mt-2 font-[family-name:var(--font-atma)]'>
-            Centro Comercial El Pueblo, Local 21 <br />
+            Centro Comercial El Pueblo,{' '}
+            <Image
+              src='/centrocomercial2.png'
+              alt='Imagen del del centro comercial El Pueblo'
+              width={70}
+              height={70}
+              className='mx-auto mt-4 '
+            />
+            Local 21 <br />
             Las Coloradas, Playa Blanca <br />
             Lanzarote, España
           </p>
@@ -113,19 +123,12 @@ const Footer = () => {
                 <path d='M20.45 0H3.55A3.55 3.55 0 0 0 0 3.55v16.9A3.55 3.55 0 0 0 3.55 24h16.9A3.55 3.55 0 0 0 24 20.45V3.55A3.55 3.55 0 0 0 20.45 0zM7.06 20.45H3.56V9h3.5zm-1.75-13.1a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm15.14 13.1h-3.5v-5.6c0-1.33-.02-3.05-1.86-3.05s-2.15 1.46-2.15 2.95v5.7h-3.5V9h3.36v1.56h.05a3.68 3.68 0 0 1 3.32-1.83c3.56 0 4.22 2.34 4.22 5.38z' />
               </svg>
             </a>
-            <a
-              href='mailto:guillermocporto@gmail.com'
-              className='text-white hover:scale-110 transition-transform'
-            >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='0 0 24 24'
-                fill='currentColor'
-                className='h-6 w-6'
-              >
-                <path d='M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-1.4 2L12 11.67 5.4 6h13.2zm1.4 12H4v-9.2l8 5.33 8-5.33V18z' />
-              </svg>
-            </a>
+
+            <MailIcon
+              href='guillermocporto@gmail.com'
+              aClass='text-white hover:scale-110 transition-transform'
+              svgClass='h-6 w-6'
+            />
           </div>
         </div>
       </div>

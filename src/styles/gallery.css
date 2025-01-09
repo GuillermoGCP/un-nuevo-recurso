@@ -1,0 +1,34 @@
+.swiper {
+  width: 90%;
+  height: 350px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007bff;
+}
+
+.swiper-slide {
+  user-select: none;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  user-select: none;
+  -webkit-user-select: none; /* Para navegadores basados en WebKit */
+  -ms-user-select: none;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  transition: ease 0.5s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #a3c9e2;
+  transform: scale(1.2);
+}

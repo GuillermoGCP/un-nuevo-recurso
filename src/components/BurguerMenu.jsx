@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import '../styles/header.css'
-import MenuIcon from './MenuIcon'
+import MenuIcon from './icons/MenuIcon'
 import { usePathname } from 'next/navigation'
 
 const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
@@ -27,22 +27,23 @@ const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
           )}
           {currentPage !== '/gallery' && (
             <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
-              <Link href='/' onClick={handleMenuClose}>
+              <Link href='/gallery' onClick={handleMenuClose}>
                 Galería
               </Link>
             </li>
           )}
-          {currentPage !== '/us' && (
-            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
-              <Link href='/' onClick={handleMenuClose}>
-                Quienes somos
-              </Link>
-            </li>
-          )}
+
           {currentPage !== '/colaborate' && (
             <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
               <Link href='/colaborate' onClick={handleMenuClose}>
                 Colabora
+              </Link>
+            </li>
+          )}
+          {currentPage !== '/contact' && (
+            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
+              <Link href='/contact' onClick={handleMenuClose}>
+                Contacto
               </Link>
             </li>
           )}

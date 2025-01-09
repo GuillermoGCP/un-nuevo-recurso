@@ -50,7 +50,7 @@ const MainComponent = () => {
       <Separator text='Noticias y Actividades' />
 
       <div
-        className='noticias  rounded-lg w-[75%] m-auto max-w-screen-md'
+        className='noticias  rounded-lg w-[85%] m-auto max-w-screen-md'
         style={{ boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.2)' }}
       >
         <section className='p-4 third-section font-[family-name:var(--font-atma)] flex flex-col items-center gap-4 mt-10'>

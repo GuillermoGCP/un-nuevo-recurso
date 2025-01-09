@@ -18,7 +18,7 @@ const Colaborate = () => {
   } = usePicModal()
   return (
     <div
-      className='colaborate  rounded-lg w-[75%] m-auto max-w-screen-md mt-10'
+      className='colaborate  rounded-lg w-[85%] m-auto max-w-screen-md mt-10'
       style={{ boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.2)' }}
     >
       <div className='p-6 '>

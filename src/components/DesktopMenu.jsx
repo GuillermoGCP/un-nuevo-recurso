@@ -17,17 +17,18 @@ const DesktopMenu = () => {
       )}
       {currentPage !== '/gallery' && (
         <li className='hover:text-red-600 hover:animate-bounce '>
-          <Link href='/'>Galería </Link>
+          <Link href='/gallery'>Galería </Link>
         </li>
       )}
-      {currentPage !== '/us' && (
-        <li className='hover:text-red-600 hover:animate-bounce '>
-          <Link href='/'>Quienes somos</Link>
-        </li>
-      )}
+
       {currentPage !== '/colaborate' && (
         <li className='hover:text-red-600 hover:animate-bounce '>
           <Link href='/colaborate'>Colabora</Link>
+        </li>
+      )}
+      {currentPage !== '/contact' && (
+        <li className='hover:text-red-600 hover:animate-bounce '>
+          <Link href='/contact'>Contacto</Link>
         </li>
       )}
     </ul>
