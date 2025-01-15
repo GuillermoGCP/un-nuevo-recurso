@@ -14,7 +14,7 @@ const Contact = () => {
       <div className='flex flex-col items-center justify-center'>
         <div className='flex items-center'>
           <PhoneIcon customClass='h-10 w-10 hover:scale-110 transition-transform' />
-          <p className='text-2xl mx-auto text-center my-4 max-w-[60vw] text-[#755959] font-[family-name:var(--font-atma)] tracking-wide '>
+          <p className='text-xl sm:text-2xl mx-auto text-center my-4 max-w-[60vw] text-[#755959] font-[family-name:var(--font-atma)] tracking-wide '>
             Llámanos al: 692 73 65 74
           </p>
         </div>
@@ -25,7 +25,7 @@ const Contact = () => {
             aClass='text-grey-500 hover:scale-110 transition-transform'
             svgClass='h-10 w-10'
           />
-          <p className='text-2xl mx-auto text-center my-4 max-w-[60vw] text-[#755959] font-[family-name:var(--font-atma)] tracking-wide'>
+          <p className='text-xl sm:text-2xl mx-auto text-center my-4 max-w-[60vw] text-[#755959] font-[family-name:var(--font-atma)] tracking-wide'>
             unnuevorecurso@gmail.com
           </p>
         </div>
