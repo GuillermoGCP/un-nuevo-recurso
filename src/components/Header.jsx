@@ -10,11 +10,11 @@ const Header = () => {
 
   return (
     <header className='min-h-[14vh] flex items-center justify-between text-white p-8 bg-header border-b border-stone-300 w-[90%] m-auto font-[family-name:var(--font-geist-mono)]'>
-      <h1 className=' text-[#4174C0] flex items-center justify-center flex-col  sm:text-base  md:text-lg lg:text-2xl xl:text-3xl  mx-auto sm:mx-0'>
+      <h1 className=' text-[#4174C0] flex items-center justify-center flex-col  sm:text-base  md:text-lg lg:text-2xl   mx-auto sm:mx-0'>
         <p>Un nuevo recurso</p>
         <Image src='/logoP-NR.jpg' alt='Logo' width={100} height={100} />
       </h1>
-      <div className='hidden sm:block sm:w-56 lg:w-72 xl:w-96'>
+      <div className='hidden sm:block sm:w-56 lg:w-72 2xl:w-96'>
         <Image src='/logoNR.jpg' alt='Logo' width={500} height={500} />
       </div>
 

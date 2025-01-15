@@ -47,6 +47,20 @@ const BurguerMenu = ({ toggleMenu, menu, handleMenuClose }) => {
               </Link>
             </li>
           )}
+          {currentPage !== '/projects' && (
+            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
+              <Link href='/projects' onClick={handleMenuClose}>
+                Proyectos
+              </Link>
+            </li>
+          )}
+          {currentPage !== '/legal-terms' && (
+            <li className='text-center text-base py-2 hover:text-red-600 hover:animate-bounce'>
+              <Link href='/legal-terms' onClick={handleMenuClose}>
+                Transparencia
+              </Link>
+            </li>
+          )}
         </>
       </ul>
     </>
