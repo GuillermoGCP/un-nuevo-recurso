@@ -41,26 +41,41 @@ const Footer = () => {
         {/* Separador */}
         <div className='my-8 border-t border-white/50 text-center'>
           <h2
-            className='text-xl font-bold'
+            className='text-xl font-bold mb-10'
             style={{
               textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
             }}
           >
             Colaboramos con
           </h2>
-          <a
-            href='https://creciendoyaiza.es/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Image
-              src='/yaiza.jpeg'
-              alt='Imagen de algunos miembros de la asociación con niños y amigos'
-              width={200}
-              height={200}
-              className='mx-auto mt-4 cursor-pointer'
-            />
-          </a>
+          <div className='flex flex-col md:flex-row justify-center md:gap-40'>
+            <a
+              href='https://creciendoyaiza.es/'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image
+                src='/yaiza2.jpg'
+                alt='Imagen del logo de Creciendo Yaiza'
+                width={200}
+                height={200}
+                className='mx-auto mt-4 cursor-pointer object-contain'
+              />
+            </a>
+            <a
+              href='https://www.facebook.com/doggysdelsur'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image
+                src='/dog.jpg'
+                alt='Imagen del logo de Doggys del sur'
+                width={200}
+                height={233}
+                className='mx-auto mt-4 cursor-pointer'
+              />
+            </a>
+          </div>
         </div>
         <div className='text-center'></div>
 
