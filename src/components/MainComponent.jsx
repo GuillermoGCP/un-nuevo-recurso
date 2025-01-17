@@ -16,6 +16,7 @@ const MainComponent = () => {
     url,
     firstSectionRef,
     secondSectionRef,
+    seventhSectionRef,
     handleOpenModal,
     handleCloseModal,
   } = usePicModal()
@@ -54,6 +55,38 @@ const MainComponent = () => {
         className='noticias  rounded-lg w-[85%] m-auto max-w-screen-md'
         style={{ boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.2)' }}
       >
+        <section
+          className='p-4 fourth-section font-[family-name:var(--font-atma)] mt-10'
+          ref={secondSectionRef}
+        >
+          <H1Component title='Paseo canino solidario 🐕' />
+          <H3Component title='Este domingo 26 de enero 2025 habrá un paseo canino familiar solidario a mano de Doggys del sur desde el Centro Comercial El Pueblo, dónde colaboraremos con nuestro puesto de la asociacion. ¡Además, habrá una clase GRATUITA de pilates (local 21) a la llegada de la ruta para que todos y todas salgan más relajados todavía!' />
+          <div className='flex justify-center'>
+            <Image
+              src='/dog.jpg'
+              alt='Imagen del logo de Doggys del sur'
+              width={150}
+              height={150}
+              className=' w-[100px] sm:w-[125px] md:w-[150px] max-w-screen-sm h-auto object-cover mx-2 '
+            />
+            <Image
+              src='/logoP-NR.jpg'
+              alt='Imagen del logo de Un nuevo recurso'
+              width={150}
+              height={150}
+              className='w-[100px] sm:w-[125px] md:w-[150px] max-w-screen-sm h-auto object-cover mx-2'
+            />
+          </div>
+          <Image
+            src='/paseo.jpg'
+            alt='Imagen de algunos miembros de la asociación con niños y amigos'
+            width={1000}
+            height={600}
+            className='w-[60vw]  max-w-screen-sm h-auto object-cover mx-auto cursor-pointer '
+            onClick={handleOpenModal}
+            ref={seventhSectionRef}
+          />
+        </section>
         <section className='p-4 third-section font-[family-name:var(--font-atma)] flex flex-col items-center gap-4 mt-10'>
           <H1Component title='Entrevista en El magacine de Biosfera 🎥' />
           <H3Component
@@ -71,6 +104,7 @@ const MainComponent = () => {
             ></iframe>
           </div>
         </section>
+
         <section
           className='p-4 second-section font-[family-name:var(--font-atma)] mt-10'
           ref={secondSectionRef}

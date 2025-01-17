@@ -45,36 +45,36 @@ const ProjectsComponent = () => {
             alt='Imagen de algunos miembros de la asociación con niños y amigos'
             width={1000}
             height={600}
-            className='w-[60vw]  max-w-screen-sm h-auto object-cover mx-auto cursor-pointer'
+            className='w-[60vw]  max-w-screen-sm h-auto object-cover mx-auto cursor-pointer mb-8'
             onClick={handleOpenModal}
           />
           <Paragraph
             text={firstParaGraphText}
-            title='Visión'
+            title='Visión 👁'
             H3style='text-2xl mx-auto font-[family-name:var(--font-atma)] text-center text-[#01B5FB]  bg-clip-text'
             divstyle='vision-section my-8'
           />
           <Paragraph
             text={secondParaGraphText}
-            title='Objetivo'
+            title='Objetivo ➡'
             H3style='text-2xl mx-auto font-[family-name:var(--font-atma)] text-center text-[#01B5FB]  bg-clip-text'
             divstyle='objective-section my-8'
           />
           <Paragraph
             text={thirdParaGraphText}
-            title='¿Qué vamos a hacer?'
+            title='¿Qué vamos a hacer? 🎁'
             H3style='text-2xl mx-auto font-[family-name:var(--font-atma)] text-center text-[#01B5FB]  bg-clip-text'
             divstyle='what-we-do-section my-8'
           />
           <Paragraph
             text={fourthParaGraphText}
-            title='¿Dónde lo hacemos?'
+            title='¿Dónde lo hacemos? ⛺'
             H3style='text-2xl mx-auto font-[family-name:var(--font-atma)] text-center text-[#01B5FB]  bg-clip-text'
             divstyle='where-we-do-section my-8'
           />
           <Paragraph
             text={fifthParaGraphText}
-            title='¿Qué necesitamos?'
+            title='¿Qué necesitamos? 🆘'
             H3style='text-2xl mx-auto font-[family-name:var(--font-atma)] text-center text-[#01B5FB]  bg-clip-text'
             divstyle='needs-section my-8'
           />
