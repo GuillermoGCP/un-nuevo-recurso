@@ -6,6 +6,7 @@ import Image from 'next/image'
 import usePicModal from '@/hooks/usePicModal'
 import PicModal from '@/components/PicModal'
 import Separator from '@/components/Separator'
+import FingerIcon from '../../components/icons/FingerIcon'
 const Colaborate = () => {
   const {
     isModalOpen,
@@ -27,6 +28,13 @@ const Colaborate = () => {
           title=' Únete a nuestra misión para mejorar nuestra comunidad 🏙. Puedes
           colaborar de dos maneras:'
         />
+
+        <FingerIcon
+          href=''
+          aClass=''
+          svgClass='h-20 w-20 flip-animation mx-auto'
+        />
+        <H3Component title='Voltea las targetas' />
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6 p-6 mb-10'>

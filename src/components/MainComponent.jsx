@@ -8,6 +8,7 @@ import FloatingButton from './FloatingButton'
 import H1Component from './H1Component'
 import H3Component from './H3Component'
 import Separator from './Separator'
+import InfoIcon from './icons/InfoIcon'
 
 const MainComponent = () => {
   const {
@@ -76,12 +77,15 @@ const MainComponent = () => {
         >
           <H1Component title='Mercadillo benéfico 🛍' />
           <H3Component
-            title='Dos domingos al mes, en el centro comercial El Pueblo 🏪. ¡Te
+            title='Segundo domingo de cada mes, en el centro comercial El Pueblo 🏪. ¡Te
             esperamos!'
           />
+          <div className='flex justify-center mb-10'>
+            <InfoIcon href='/projects' svgClass='w-20 h-20' />
+          </div>
 
           <Image
-            src='/mercadillo.jpeg'
+            src='/mercadillo1.jpg'
             alt='Imagen de algunos miembros de la asociación con niños y amigos'
             width={1000}
             height={600}

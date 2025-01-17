@@ -8,6 +8,7 @@ const usePicModal = () => {
   const thirdSectionRef = useRef(null)
   const fourthSectionRef = useRef(null)
   const fithSectionRef = useRef(null)
+  const sixthSectionRef = useRef(null)
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
@@ -23,13 +24,15 @@ const usePicModal = () => {
       if (path.includes(firstSectionRef.current)) {
         setUrl('/portada.jpeg')
       } else if (path.includes(secondSectionRef.current)) {
-        setUrl('/mercadillo.jpeg')
+        setUrl('/mercadillo1.jpg')
       } else if (path.includes(thirdSectionRef.current)) {
         setUrl('/colabora.jpg')
       } else if (path.includes(fourthSectionRef.current)) {
         setUrl('/colabora3.jpg')
       } else if (path.includes(fithSectionRef.current)) {
         setUrl('/colabora2.jpg')
+      } else if (path.includes(sixthSectionRef.current)) {
+        setUrl('/mercadillo1.jpg')
       }
     }
 
@@ -48,6 +51,7 @@ const usePicModal = () => {
     thirdSectionRef,
     fourthSectionRef,
     fithSectionRef,
+    sixthSectionRef,
   }
 }
 export default usePicModal
