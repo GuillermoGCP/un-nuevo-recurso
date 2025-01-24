@@ -17,6 +17,7 @@ const MainComponent = () => {
     firstSectionRef,
     secondSectionRef,
     seventhSectionRef,
+    eighthSectionRef,
     handleOpenModal,
     handleCloseModal,
   } = usePicModal()
@@ -85,6 +86,23 @@ const MainComponent = () => {
             className='w-[60vw]  max-w-screen-sm h-auto object-cover mx-auto cursor-pointer '
             onClick={handleOpenModal}
             ref={seventhSectionRef}
+          />
+        </section>
+        <section
+          className='p-4 eighth-section font-[family-name:var(--font-atma)] mt-10'
+          ref={eighthSectionRef}
+        >
+          <H1Component title='Taller de tote bag COSTURA' />
+          <H3Component title='¿Te gustaría aprender a transformar prendas viejas 🩳 en algo útil y único? Te invitamos a participar de un taller ✂ de costura creativa el próximo sábado 15 de febrero, de 10:00 a 12:00, en nuestro local (nº 21) del Centro Comercial El Pueblo – Las Coloradas, en Playa Blanca. ' />
+
+          <Image
+            src='/costura.jpeg'
+            alt='Imagen de algunos miembros de la asociación con niños y amigos'
+            width={1000}
+            height={600}
+            className='w-[60vw]  max-w-screen-sm h-auto object-cover mx-auto cursor-pointer '
+            onClick={handleOpenModal}
+            ref={eighthSectionRef}
           />
         </section>
         <section className='p-4 third-section font-[family-name:var(--font-atma)] flex flex-col items-center gap-4 mt-10'>
