@@ -9,6 +9,7 @@ import H1Component from './H1Component'
 import H3Component from './H3Component'
 import Separator from './Separator'
 import InfoIcon from './icons/InfoIcon'
+import Paragraph from './Paragraph'
 
 const MainComponent = () => {
   const {
@@ -18,6 +19,7 @@ const MainComponent = () => {
     secondSectionRef,
     seventhSectionRef,
     eighthSectionRef,
+    ninthSectionRef,
     handleOpenModal,
     handleCloseModal,
   } = usePicModal()
@@ -56,6 +58,69 @@ const MainComponent = () => {
         className='noticias  rounded-lg w-[85%] m-auto max-w-screen-md'
         style={{ boxShadow: '2px 2px 10px rgba(0, 0, 0, 0.2)' }}
       >
+        <section
+          className='p-4 fourth-section font-[family-name:var(--font-atma)] mt-10'
+          ref={ninthSectionRef}
+        >
+          <H1Component title='Taller gratuito de Arteterapia 🎨' />
+          <H3Component
+            title={
+              <>
+                Playa Blanca acoge este sábado un taller gratuito de
+                Arteterapia.
+                <br />
+                Organizado por la Asociación Un Nuevo Recurso, se celebrará en
+                La Aurora a las 11:00 h. Abierto a todas las edades, las
+                inscripciones se pueden realizar en el{' '}
+                <strong>676 78 09 22</strong>.
+              </>
+            }
+          />
+          <Image
+            src='/arteterapia.jpeg'
+            alt='Cartel del taller de Arteterapia'
+            width={1000}
+            height={600}
+            className='w-[60vw] max-w-screen-sm h-auto object-cover mx-auto cursor-pointer'
+            onClick={handleOpenModal}
+          />
+          <Paragraph
+            text={
+              <>
+                <p>
+                  Para comenzar el año desconectando del estrés y reconectando
+                  con uno mismo, la Asociación Un Nuevo Recurso propone un
+                  taller gratuito de Arteterapia que impartirá la monitora
+                  especializada Sonia Bordón este sábado 10 de enero, a las
+                  11:00 horas, en el Centro Sociocultural La Aurora de Playa
+                  Blanca.
+                </p>
+                <p className='mt-4'>
+                  El taller está pensado como un espacio inclusivo y seguro en
+                  el que, a través de la pintura, las personas participantes
+                  podrán explorar emociones, expresarse libremente y mejorar su
+                  bienestar psicológico. No es necesario tener conocimientos
+                  previos de pintura, ya que el objetivo no es crear una obra
+                  perfecta sino disfrutar del proceso creativo como herramienta
+                  para la sanación y el desarrollo personal.
+                </p>
+                <p className='mt-4'>
+                  Ideal para niños, jóvenes y adultos, es especialmente
+                  beneficioso para aquellas personas con dificultades de
+                  comunicación o ansiedad, ya que fomenta el pensamiento
+                  reflexivo, la creatividad y el autoconocimiento; mejorar la
+                  capacidad de expresar emociones difíciles de verbalizar, la
+                  autoestima y la confianza; y potencia la concentración, la
+                  atención y la memoria, entre otras.
+                </p>
+                <p className='mt-4'>
+                  El taller es gratuito pero requiere inscripción previa en el
+                  teléfono <strong>+34 676 78 09 22</strong>.
+                </p>
+              </>
+            }
+          />
+        </section>
         <section
           className='p-4 fourth-section font-[family-name:var(--font-atma)] mt-10'
           ref={secondSectionRef}
