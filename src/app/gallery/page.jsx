@@ -9,6 +9,20 @@ import H1Component from '@/components/H1Component'
 import H3Component from '@/components/H3Component'
 
 export default function Gallery() {
+  const arteterapiaImages = [
+    '/arteterapia/WhatsApad026-01-11 at 10.52.38.jpeg',
+    '/arteterapia/WhatsApp Imaadfa-11 at 10.52.39.jpeg',
+    '/arteterapia/WhatsApp Imadfe2026-01-11 at 10.52.38.jpeg',
+    '/arteterapia/WhatsApp Image 2026-01-11 at 10.52.37.jpeg',
+    '/arteterapia/WhatsApp Image 2026-01-1df1 at 10.52.37.jpeg',
+    '/arteterapia/WhatsApp Image 2026-01-ddd11 at 10.52.39.jpeg',
+    '/arteterapia/WhatsApp Image 2026-dfdaf01-11 at 10.52.40.jpeg',
+    '/arteterapia/WhatsApp Imdf2026-01-11 at 10.52.37.jpeg',
+    '/arteterapia/WhatsApp Imdfda26-01-11 at 10.52.39.jpeg',
+    '/arteterapia/Whatsadfadage 2026-01-11 at 10.52.39.jpeg',
+    '/arteterapia/addaf.jpg.jpeg',
+    '/arteterapia/dff2026-01-11 at 10.52.38.jpeg',
+  ]
   const images = [
     '/slider1.jpg',
     '/slider2.jpg',
@@ -38,32 +52,61 @@ export default function Gallery() {
   ]
 
   return (
-    <div className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'>
-      <H1Component title='Reflejos del Compromiso de Nuestra Comunidad 🏠' />
-      <H3Component title='A través de estas imágenes 🎞, mostramos las iniciativas con las que apoyamos a quienes más lo necesitan: desde mercadillos benéficos hasta actividades recreativas para niños y familias 👨‍👧‍👧.' />
-      <Swiper
-        modules={[Navigation, Pagination, A11y]}
-        navigation
-        pagination={{ clickable: true }}
-        loop
-        breakpoints={{
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-        }}
-        className='my-10'
-      >
-        {images.map((src, index) => (
-          <SwiperSlide key={index}>
-            <img src={src} alt={`Image ${index}`} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <>
+      <div className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'>
+        <H1Component title='Taller gratuito de Arteterapia 🎨' />
+        <H3Component title='Momentos del encuentro donde compartimos creatividad, emoción y bienestar a través de la pintura.' />
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          loop
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }}
+          className='my-10'
+        >
+          {arteterapiaImages.map((src, index) => (
+            <SwiperSlide key={index}>
+              <img src={encodeURI(src)} alt={`Arteterapia ${index + 1}`} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'>
+        <H1Component title='Reflejos del Compromiso de Nuestra Comunidad 🏠' />
+        <H3Component title='A través de estas imágenes 🎞, mostramos las iniciativas con las que apoyamos a quienes más lo necesitan: desde mercadillos benéficos hasta actividades recreativas para niños y familias 👨‍👧‍👧.' />
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          loop
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }}
+          className='my-10'
+        >
+          {images.map((src, index) => (
+            <SwiperSlide key={index}>
+              <img src={src} alt={`Image ${index}`} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </>
   )
 }

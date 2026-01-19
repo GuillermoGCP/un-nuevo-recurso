@@ -1,5 +1,7 @@
 'use client'
+import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import '../app/globals.css'
 import PicModal from './PicModal'
 import usePicModal from '@/hooks/usePicModal'
@@ -10,8 +12,10 @@ import H3Component from './H3Component'
 import Separator from './Separator'
 import InfoIcon from './icons/InfoIcon'
 import Paragraph from './Paragraph'
+import VideoModal from './VideoModal'
 
 const MainComponent = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
   const {
     isModalOpen,
     url,
@@ -23,6 +27,19 @@ const MainComponent = () => {
     handleOpenModal,
     handleCloseModal,
   } = usePicModal()
+
+  const handleOpenVideo = () => {
+    setIsVideoOpen(true)
+  }
+
+  const handleCloseVideo = () => {
+    setIsVideoOpen(false)
+  }
+
+  const primaryActionClasses =
+    'inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#8b7070] bg-[#8b7070] text-white font-[family-name:var(--font-atma)] shadow-md transition hover:bg-[#725b5b] hover:shadow-lg'
+  const secondaryActionClasses =
+    'inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#8b7070] bg-white text-[#8b7070] font-[family-name:var(--font-atma)] shadow-md transition hover:bg-[#f3e8e1] hover:shadow-lg'
 
   return (
     <div className='main-component'>
@@ -49,6 +66,12 @@ const MainComponent = () => {
 
         {isModalOpen && (
           <PicModal pic={url !== '' && url} onClose={handleCloseModal} />
+        )}
+        {isVideoOpen && (
+          <VideoModal
+            videoUrl='https://res.cloudinary.com/dbq4zkmbt/video/upload/v1768835852/WhatsApp_Video_2026-01-11_at_10.52.39_po3thc.mp4'
+            onClose={handleCloseVideo}
+          />
         )}
       </section>
 
@@ -84,6 +107,23 @@ const MainComponent = () => {
             className='w-[60vw] max-w-screen-sm h-auto object-cover mx-auto cursor-pointer'
             onClick={handleOpenModal}
           />
+          <div className='flex flex-wrap items-center justify-center gap-3 mt-5'>
+            <Link
+              href='/gallery'
+              className={primaryActionClasses}
+            >
+              <span aria-hidden='true'>📸</span>
+              Mira las fotos del evento
+            </Link>
+            <button
+              type='button'
+              className={secondaryActionClasses}
+              onClick={handleOpenVideo}
+            >
+              <span aria-hidden='true'>🎬</span>
+              Ver video del evento
+            </button>
+          </div>
           <Paragraph
             text={
               <>
