@@ -23,6 +23,17 @@ export default function Gallery() {
     '/arteterapia/addaf.jpg.jpeg',
     '/arteterapia/dff2026-01-11 at 10.52.38.jpeg',
   ]
+  const encuentroImages = [
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840076/WhatsApp_Image_2026-01-19_at_17.11.27_rmdpd0.jpg',
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840076/WhatsApp_Image_2026-01-19_at_17.11.27_2_obliif.jpg',
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840076/WhatsApp_Image_2026-01-19_at_17.11.27_3_gwfthe.jpg',
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840075/WhatsApp_Image_2026-01-19_at_17.11.26_syzbud.jpg',
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840075/WhatsApp_Image_2026-01-19_at_17.11.26_4_hdaeum.jpg',
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840075/WhatsApp_Image_2026-01-19_at_17.11.27_1_bfgxx1.jpg',
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840075/WhatsApp_Image_2026-01-19_at_17.11.26_3_qblezh.jpg',
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840075/WhatsApp_Image_2026-01-19_at_17.11.26_2_w98gnb.jpg',
+    'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840075/WhatsApp_Image_2026-01-19_at_17.11.26_1_o6xlpw.jpg',
+  ]
   const images = [
     '/slider1.jpg',
     '/slider2.jpg',
@@ -53,7 +64,10 @@ export default function Gallery() {
 
   return (
     <>
-      <div className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'>
+      <div
+        id='arteterapia'
+        className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'
+      >
         <H1Component title='Taller gratuito de Arteterapia 🎨' />
         <H3Component title='Momentos del encuentro donde compartimos creatividad, emoción y bienestar a través de la pintura.' />
         <Swiper
@@ -76,6 +90,36 @@ export default function Gallery() {
           {arteterapiaImages.map((src, index) => (
             <SwiperSlide key={index}>
               <img src={encodeURI(src)} alt={`Arteterapia ${index + 1}`} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div
+        id='encuentro-la-aurora'
+        className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'
+      >
+        <H1Component title='Encuentro solidario en La Aurora 🤝' />
+        <H3Component title='Un resumen en fotos de una tarde llena de juego, risas y colaboración vecinal.' />
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          loop
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }}
+          className='my-10'
+        >
+          {encuentroImages.map((src, index) => (
+            <SwiperSlide key={index}>
+              <img src={src} alt={`Encuentro La Aurora ${index + 1}`} />
             </SwiperSlide>
           ))}
         </Swiper>

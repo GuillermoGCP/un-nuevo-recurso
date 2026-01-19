@@ -12,6 +12,7 @@ const usePicModal = () => {
   const seventhSectionRef = useRef(null)
   const eighthSectionRef = useRef(null)
   const ninthSectionRef = useRef(null)
+  const tenthSectionRef = useRef(null)
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
@@ -38,12 +39,16 @@ const usePicModal = () => {
         setUrl('/mercadillo1.jpg')
       } else if (path.includes(seventhSectionRef.current)) {
         setUrl('/paseo.jpg')
-      } else if (path.includes(eighthSectionRef.current)) {
-        setUrl('/costura.jpeg')
-      } else if (path.includes(ninthSectionRef.current)) {
-        setUrl('/arteterapia.jpeg')
-      }
+    } else if (path.includes(eighthSectionRef.current)) {
+      setUrl('/costura.jpeg')
+    } else if (path.includes(ninthSectionRef.current)) {
+      setUrl('/arteterapia.jpeg')
+    } else if (path.includes(tenthSectionRef.current)) {
+      setUrl(
+        'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840076/WhatsApp_Image_2026-01-19_at_17.14.01_ubqwmf.jpg'
+      )
     }
+  }
 
     document.addEventListener('click', handleSelectPic)
     return () => {
@@ -64,6 +69,7 @@ const usePicModal = () => {
     seventhSectionRef,
     eighthSectionRef,
     ninthSectionRef,
+    tenthSectionRef,
   }
 }
 export default usePicModal
