@@ -27,6 +27,7 @@ const MainComponent = () => {
     eighthSectionRef,
     ninthSectionRef,
     tenthSectionRef,
+    eleventhSectionRef,
     handleOpenModal,
     handleCloseModal,
   } = usePicModal()
@@ -59,6 +60,9 @@ const MainComponent = () => {
     costura: matchesText('Taller de tote bag COSTURA'),
     entrevista: matchesText('Entrevista en El magacine de Biosfera 🎥'),
     mercadillo: matchesText('Mercadillo benéfico 🛍'),
+    fortalecimiento: matchesText(
+      'Taller de fortalecimiento de suelo pélvico y reeducación postural'
+    ),
   }
   const contentMatches = {
     arteterapia: matchesText(
@@ -89,6 +93,12 @@ const MainComponent = () => {
     ),
     mercadillo: matchesText(
       'Segundo domingo de cada mes, en el centro comercial El Pueblo. ¡Te esperamos!'
+    ),
+    fortalecimiento: matchesText(
+      'El taller de fortalecimiento de suelo pélvico y reeducación postural tiene como objetivo principal visibilizar que las disfunciones del suelo pélvico y los dolores crónicos de espalda pueden ser atendidos. ' +
+        'No es magia, no es rápido, pero es muy efectivo y puede ayudar a mejorar notablemente la calidad de vida de las personas. ' +
+        'Aprender cómo funciona el sistema de sostén postural, el rol que cumplen los distintos músculos implicados y cómo se entrenan naturalmente mediante la respiración. ' +
+        'Brindar a las personas una llave para seguir abriendo puertas que les ayuden a vivir mejor, en mayor conexión consigo mismas y fortalecer el autocuidado.'
     ),
   }
   const hasTitleMatches = Object.values(titleMatches).some(Boolean)
@@ -259,6 +269,53 @@ const MainComponent = () => {
                     El taller es gratuito pero requiere inscripción previa en
                     el teléfono <strong>+34 676 78 09 22</strong>.
                   </p>
+                </>
+              }
+            />
+          </section>
+        )}
+        {shouldShow('fortalecimiento') && (
+          <section
+            className='p-4 fourth-section font-[family-name:var(--font-atma)] mt-10'
+            ref={eleventhSectionRef}
+          >
+            <H1Component title='Taller de fortalecimiento de suelo pélvico y reeducación postural' />
+            <H3Component title='El taller de fortalecimiento de suelo pélvico y reeducación postural tiene como objetivo principal visibilizar que las disfunciones del suelo pélvico y los dolores crónicos de espalda pueden ser atendidos.' />
+            <Image
+              src='/fortalecimiento.jpeg'
+              alt='Cartel del taller de fortalecimiento de suelo pélvico y reeducación postural'
+              width={1000}
+              height={600}
+              className='w-[60vw] max-w-screen-sm h-auto object-cover mx-auto cursor-pointer'
+              onClick={handleOpenModal}
+            />
+            <Paragraph
+              text={
+                <>
+                  <p>
+                    No es magia, no es rápido, pero es muy efectivo y puede
+                    ayudar a mejorar notablemente la calidad de vida de las
+                    personas.
+                  </p>
+                  <p className='mt-4'>
+                    En primer lugar, aprender cómo funciona el sistema de sostén
+                    postural, el rol que cumplen los distintos músculos
+                    implicados y cómo se entrenan naturalmente mediante la
+                    respiración.
+                  </p>
+                  <p className='mt-4'>
+                    Mi intención es poder brindarles a las personas una llave
+                    para seguir abriendo puertas que les ayuden a vivir mejor,
+                    en mayor conexión consigo mismas y fortalecer el
+                    autocuidado.
+                  </p>
+                  <p className='mt-4'>
+                    Intento transmitir la posibilidad de integrar de forma
+                    gradual y continua estas herramientas a la vida cotidiana de
+                    las personas y quedo a disposición por si surgieran dudas o
+                    inquietudes.
+                  </p>
+                  <p className='mt-4'>María Belén Straitas</p>
                 </>
               }
             />

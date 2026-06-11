@@ -13,6 +13,7 @@ const usePicModal = () => {
   const eighthSectionRef = useRef(null)
   const ninthSectionRef = useRef(null)
   const tenthSectionRef = useRef(null)
+  const eleventhSectionRef = useRef(null)
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
@@ -47,6 +48,8 @@ const usePicModal = () => {
       setUrl(
         'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840076/WhatsApp_Image_2026-01-19_at_17.14.01_ubqwmf.jpg'
       )
+    } else if (path.includes(eleventhSectionRef.current)) {
+      setUrl('/fortalecimiento.jpeg')
     }
   }
 
@@ -70,6 +73,7 @@ const usePicModal = () => {
     eighthSectionRef,
     ninthSectionRef,
     tenthSectionRef,
+    eleventhSectionRef,
   }
 }
 export default usePicModal
