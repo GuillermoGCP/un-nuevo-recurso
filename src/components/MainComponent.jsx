@@ -54,6 +54,9 @@ const MainComponent = () => {
   const normalizedSearch = normalizeTitle(searchTerm.trim())
   const matchesText = (text) => normalizeTitle(text).includes(normalizedSearch)
   const titleMatches = {
+    arteterapia2026: matchesText(
+      'Taller de arte terapia en el campamento de verano con Creciendo Yaiza'
+    ),
     arteterapia: matchesText('Taller gratuito de Arteterapia 🎨'),
     encuentro: matchesText('Encuentro solidario en La Aurora 🤝'),
     paseo: matchesText('Paseo canino solidario 🐕'),
@@ -65,6 +68,10 @@ const MainComponent = () => {
     ),
   }
   const contentMatches = {
+    arteterapia2026: matchesText(
+      'Taller de arte terapia en el campamento de verano con Creciendo Yaiza. ' +
+        'Compartimos algunas imágenes del taller de arte terapia celebrado en el campamento de verano con Creciendo Yaiza.'
+    ),
     arteterapia: matchesText(
       'Playa Blanca acoge este sábado un taller gratuito de Arteterapia. ' +
         'Organizado por la Asociación Un Nuevo Recurso, se celebrará en La Aurora a las 11:00 h. ' +
@@ -104,6 +111,8 @@ const MainComponent = () => {
   const hasTitleMatches = Object.values(titleMatches).some(Boolean)
   const hasContentMatches = Object.values(contentMatches).some(Boolean)
   const hasMatches = searchInContent ? hasContentMatches : hasTitleMatches
+  const arteterapia2026Text =
+    'Compartimos algunas imágenes del taller de arte terapia celebrado en el campamento de verano con Creciendo Yaiza.'
   const shouldShow = (key) => {
     if (!hasSearch) return true
     return searchInContent ? contentMatches[key] : titleMatches[key]
@@ -191,6 +200,29 @@ const MainComponent = () => {
               ? 'No hay publicaciones con ese contenido.'
               : 'No hay publicaciones con ese titulo. Cambia el switch para buscar por contenido.'}
           </div>
+        )}
+        {shouldShow('arteterapia2026') && (
+          <section className='p-4 fourth-section font-[family-name:var(--font-atma)] mt-10'>
+            <H1Component title='Taller de arte terapia en el campamento de verano con Creciendo Yaiza' />
+            <H3Component title={arteterapia2026Text} />
+            <Image
+              src='/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.49.00.jpeg'
+              alt='Taller de arte terapia en el campamento de verano con Creciendo Yaiza'
+              width={1000}
+              height={600}
+              className='w-[60vw] max-w-screen-sm h-auto object-cover mx-auto cursor-pointer'
+              onClick={handleOpenModal}
+            />
+            <div className='flex flex-wrap items-center justify-center gap-3 mt-5'>
+              <Link
+                href='/gallery#arteterapia-2026'
+                className={primaryActionClasses}
+              >
+                <span aria-hidden='true'>📸</span>
+                Mira las fotos del encuentro
+              </Link>
+            </div>
+          </section>
         )}
         {shouldShow('fortalecimiento') && (
           <section

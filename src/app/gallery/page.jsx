@@ -23,6 +23,23 @@ export default function Gallery() {
     '/arteterapia/addaf.jpg.jpeg',
     '/arteterapia/dff2026-01-11 at 10.52.38.jpeg',
   ]
+  const arteterapia2026Images = [
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.49.00.jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.49.00 (1).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.59.jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.59 (4).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.59 (3).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.59 (2).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.59 (1).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.58.jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.58 (5).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.58 (4).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.58 (3).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.58 (2).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.58 (1).jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.57.jpeg',
+    '/ArteTerapia 2026/WhatsApp Image 2026-07-08 at 10.48.57 (1).jpeg',
+  ]
   const encuentroImages = [
     'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840076/WhatsApp_Image_2026-01-19_at_17.11.27_rmdpd0.jpg',
     'https://res.cloudinary.com/dbq4zkmbt/image/upload/v1768840076/WhatsApp_Image_2026-01-19_at_17.11.27_2_obliif.jpg',
@@ -64,6 +81,36 @@ export default function Gallery() {
 
   return (
     <>
+      <div
+        id='arteterapia-2026'
+        className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'
+      >
+        <H1Component title='Taller de arte terapia en el campamento de verano con Creciendo Yaiza' />
+        <H3Component title='Momentos del encuentro donde compartimos creatividad, emoción y bienestar a través de la pintura.' />
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          loop
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }}
+          className='my-10'
+        >
+          {arteterapia2026Images.map((src, index) => (
+            <SwiperSlide key={index}>
+              <img src={encodeURI(src)} alt={`Arte terapia 2026 ${index + 1}`} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
       <div
         id='arteterapia'
         className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'
