@@ -28,6 +28,7 @@ const MainComponent = () => {
     ninthSectionRef,
     tenthSectionRef,
     eleventhSectionRef,
+    twelfthSectionRef,
     handleOpenModal,
     handleCloseModal,
   } = usePicModal()
@@ -54,6 +55,7 @@ const MainComponent = () => {
   const normalizedSearch = normalizeTitle(searchTerm.trim())
   const matchesText = (text) => normalizeTitle(text).includes(normalizedSearch)
   const titleMatches = {
+    tallerPintura2026: matchesText('Taller de pintura 2026'),
     arteterapia2026: matchesText(
       'Taller de arte terapia en el campamento de verano con Creciendo Yaiza'
     ),
@@ -68,6 +70,9 @@ const MainComponent = () => {
     ),
   }
   const contentMatches = {
+    tallerPintura2026: matchesText(
+      'Jornada veraniega de desarrollo artístico, juegos y diversión en excelente compañía.'
+    ),
     arteterapia2026: matchesText(
       'Taller de arte terapia en el campamento de verano con Creciendo Yaiza. ' +
         'Compartimos algunas imágenes del taller de arte terapia celebrado en el campamento de verano con Creciendo Yaiza.'
@@ -201,6 +206,33 @@ const MainComponent = () => {
               : 'No hay publicaciones con ese titulo. Cambia el switch para buscar por contenido.'}
           </div>
         )}
+        {shouldShow('tallerPintura2026') && (
+          <section
+            className='p-4 fourth-section font-[family-name:var(--font-atma)] mt-10'
+            ref={twelfthSectionRef}
+          >
+            <H1Component title='Taller de pintura 2026' />
+            <H3Component title='Jornada veraniega de desarrollo artístico, juegos y diversión en excelente compañía.' />
+            <Image
+              src='/nuevas/WhatsApp Image 2026-08-21 at 11.11.55 (4).jpeg'
+              alt='Taller de pintura 2026'
+              width={1000}
+              height={600}
+              className='w-[60vw] max-w-screen-sm h-auto object-cover mx-auto cursor-pointer'
+              onClick={handleOpenModal}
+            />
+            <div className='flex flex-wrap items-center justify-center gap-3 mt-5'>
+              <Link
+                href='/gallery#taller-pintura-2026'
+                className={primaryActionClasses}
+              >
+                <span aria-hidden='true'>📸</span>
+                Mira las fotos del encuentro
+              </Link>
+            </div>
+          </section>
+        )}
+
         {shouldShow('arteterapia2026') && (
           <section className='p-4 fourth-section font-[family-name:var(--font-atma)] mt-10'>
             <H1Component title='Taller de arte terapia en el campamento de verano con Creciendo Yaiza' />

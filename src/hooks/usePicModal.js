@@ -14,6 +14,7 @@ const usePicModal = () => {
   const ninthSectionRef = useRef(null)
   const tenthSectionRef = useRef(null)
   const eleventhSectionRef = useRef(null)
+  const twelfthSectionRef = useRef(null)
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
@@ -50,6 +51,8 @@ const usePicModal = () => {
       )
     } else if (path.includes(eleventhSectionRef.current)) {
       setUrl('/fortalecimiento.jpeg')
+    } else if (path.includes(twelfthSectionRef.current)) {
+      setUrl('/nuevas/WhatsApp Image 2026-08-21 at 11.11.55 (4).jpeg')
     }
   }
 
@@ -74,6 +77,7 @@ const usePicModal = () => {
     ninthSectionRef,
     tenthSectionRef,
     eleventhSectionRef,
+    twelfthSectionRef,
   }
 }
 export default usePicModal

@@ -9,6 +9,23 @@ import H1Component from '@/components/H1Component'
 import H3Component from '@/components/H3Component'
 
 export default function Gallery() {
+  const tallerPintura2026Images = [
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.56.jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.56 (6).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.56 (5).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.56 (4).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.56 (3).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.56 (2).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.56 (1).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.55.jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.55 (5).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.55 (4).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.55 (3).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.55 (2).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.55 (1).jpeg',
+    '/nuevas/WhatsApp Image 2026-08-21 at 11.11.54.jpeg',
+  ]
+
   const arteterapiaImages = [
     '/arteterapia/WhatsApad026-01-11 at 10.52.38.jpeg',
     '/arteterapia/WhatsApp Imaadfa-11 at 10.52.39.jpeg',
@@ -81,6 +98,37 @@ export default function Gallery() {
 
   return (
     <>
+      <div
+        id='taller-pintura-2026'
+        className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'
+      >
+        <H1Component title='Taller de pintura 2026' />
+        <H3Component title='Jornada veraniega de desarrollo artístico, juegos y diversión en excelente compañía.' />
+        <Swiper
+          modules={[Navigation, Pagination, A11y]}
+          navigation
+          pagination={{ clickable: true }}
+          loop
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          }}
+          className='my-10'
+        >
+          {tallerPintura2026Images.map((src, index) => (
+            <SwiperSlide key={index}>
+              <img src={encodeURI(src)} alt={`Taller de pintura 2026 ${index + 1}`} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
       <div
         id='arteterapia-2026'
         className='w-[90vw] slider-container max-w-screen-md mx-auto my-10'
